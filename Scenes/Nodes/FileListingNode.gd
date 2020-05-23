@@ -79,7 +79,7 @@ func get_output(slot):
 							if err == OK:
 								var found = regex.search(current_file)
 								if found:
-									filepaths.append("%s/%s.%s" % [current_dir.get_current_dir(), current_file.get_basename(), current_file.get_extension()])
+									tmatch = true
 							else:
 								_error("Couldn't parse file types as regex")
 						if tmatch:

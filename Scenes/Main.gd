@@ -24,7 +24,12 @@ export(Color) var BinaryNodeColor
 export(Color) var StringArrayNodeColor
 
 var node_styles = {
-	"Ops": { "bg": "#806912" }
+	"Data": { "bg": "131280"},
+	"Ops": { "bg": "#806912" },
+	"Input": { "bg": "#804212"},
+	"Output": { "bg": "#065f14"},
+	"FileSystem": { "bg": "#06445f"},
+	"Misc": { "bg": "#393939"}
 }
 
 var node_lookup = { 
@@ -33,6 +38,7 @@ var node_lookup = {
 	"ReplaceString" : {"scene": "res://Scenes/Nodes/ReplaceStringNode.tscn", "cat": "Ops"},
 	"String2Array" : {"scene": "res://Scenes/Nodes/String2ArrayNode.tscn", "cat": "Ops"},
 	"Array2String" : {"scene": "res://Scenes/Nodes/Array2StringNode.tscn", "cat": "Ops"},
+	"PruneArray" : { "scene": "res://Scenes/Nodes/PruneArrayNode.tscn", "cat": "Ops"},
 	"OutputFile": {"scene": "res://Scenes/Nodes/OutputFileNode.tscn", "cat": "Output"},
 	"InputFile" : {"scene": "res://Scenes/Nodes/InputFileNode.tscn", "cat": "Input"},
 	"InputTextFile" : {"scene": "res://Scenes/Nodes/InputTextFileNode.tscn", "cat": "Input"},

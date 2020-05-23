@@ -1,6 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.431373, 0.0156863, 0.0156863, 1 )
+border_color = Color( 0.219608, 0.00784314, 0.00784314, 1 )
+border_blend = true
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.00392157, 0.0156863, 0.0509804, 1 )
@@ -30,31 +35,30 @@ __meta__ = {
 
 [node name="Title" type="PanelContainer" parent="VBoxContainer"]
 margin_right = 1024.0
-margin_bottom = 28.0
+margin_bottom = 14.0
 size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
 
 [node name="Label" type="Label" parent="VBoxContainer/Title"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 1017.0
-margin_bottom = 21.0
+margin_right = 1024.0
+margin_bottom = 14.0
 text = "Visual Scripting Virus Engine"
 align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 32.0
+margin_top = 18.0
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_vertical = 3
 
 [node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer/HBoxContainer"]
 margin_right = 1024.0
-margin_bottom = 568.0
+margin_bottom = 582.0
 size_flags_horizontal = 3
 
 [node name="SearchContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/HSplitContainer"]
 margin_right = 100.0
-margin_bottom = 568.0
+margin_bottom = 582.0
 
 [node name="NodeSearch" type="LineEdit" parent="VBoxContainer/HBoxContainer/HSplitContainer/SearchContainer"]
 margin_right = 100.0
@@ -63,14 +67,14 @@ margin_bottom = 24.0
 [node name="NodeTree" type="Tree" parent="VBoxContainer/HBoxContainer/HSplitContainer/SearchContainer"]
 margin_top = 28.0
 margin_right = 100.0
-margin_bottom = 568.0
+margin_bottom = 582.0
 rect_min_size = Vector2( 100, 0 )
 size_flags_vertical = 3
 
 [node name="GraphContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/HSplitContainer"]
 margin_left = 112.0
 margin_right = 1024.0
-margin_bottom = 568.0
+margin_bottom = 582.0
 size_flags_horizontal = 3
 
 [node name="ButtonBar" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer"]
@@ -115,7 +119,7 @@ text = "Run"
 [node name="GraphEdit" type="GraphEdit" parent="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer"]
 margin_top = 24.0
 margin_right = 912.0
-margin_bottom = 568.0
+margin_bottom = 582.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/bg = SubResource( 1 )

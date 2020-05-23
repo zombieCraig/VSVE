@@ -72,7 +72,7 @@ func process_output():
 		if write_data_type == 2:
 			target_file.store_buffer(write_data)
 		elif write_data_type == 3:
-			target_file.store_string(write_data.join(""))
+			target_file.store_string(write_data.join("\n"))
 		else:
 			target_file.store_string(write_data)
 		target_file.close()
