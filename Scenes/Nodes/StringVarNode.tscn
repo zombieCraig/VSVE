@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Nodes/StringVarNode.gd" type="Script" id=1]
+
+[node name="StringVarNode" type="GraphNode"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_right = -787.0
+margin_bottom = -541.0
+title = "String Var"
+show_close = true
+resizable = true
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 1
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="String" type="LineEdit" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 220.0
+margin_bottom = 48.0
+size_flags_horizontal = 3

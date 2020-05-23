@@ -1,0 +1,103 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Nodes/ReplaceStringNode.gd" type="Script" id=1]
+
+[node name="ReplaceStringNode" type="GraphNode"]
+margin_right = 220.0
+margin_bottom = 138.0
+title = "Replace String"
+show_close = true
+resizable = true
+slot/0/left_enabled = true
+slot/0/left_type = 1
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 2
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+slot/2/left_enabled = true
+slot/2/left_type = 1
+slot/2/left_color = Color( 0.0313726, 0.360784, 0.572549, 1 )
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color( 1, 1, 1, 1 )
+slot/3/left_enabled = true
+slot/3/left_type = 1
+slot/3/left_color = Color( 1, 1, 1, 1 )
+slot/3/right_enabled = true
+slot/3/right_type = 1
+slot/3/right_color = Color( 1, 1, 1, 1 )
+slot/4/left_enabled = true
+slot/4/left_type = 3
+slot/4/left_color = Color( 1, 1, 1, 1 )
+slot/4/right_enabled = true
+slot/4/right_type = 3
+slot/4/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 204.0
+margin_bottom = 48.0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+margin_top = 5.0
+margin_right = 27.0
+margin_bottom = 19.0
+text = "Find"
+
+[node name="Find" type="LineEdit" parent="HBoxContainer"]
+margin_left = 31.0
+margin_right = 188.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+
+[node name="IsRegex" type="CheckBox" parent="."]
+margin_left = 16.0
+margin_top = 49.0
+margin_right = 204.0
+margin_bottom = 73.0
+text = "Is RegEx"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 74.0
+margin_right = 204.0
+margin_bottom = 98.0
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+margin_top = 5.0
+margin_right = 78.0
+margin_bottom = 19.0
+text = "replace with"
+
+[node name="With" type="LineEdit" parent="HBoxContainer2"]
+margin_left = 82.0
+margin_right = 188.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+
+[node name="WithString" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 99.0
+margin_right = 204.0
+margin_bottom = 113.0
+text = "String"
+align = 1
+
+[node name="WithStringArray" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 114.0
+margin_right = 204.0
+margin_bottom = 128.0
+text = "String Array"
+align = 1

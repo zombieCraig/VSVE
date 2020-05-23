@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Nodes/OutputFileNode.gd" type="Script" id=1]
+
+[node name="OutputFileNode" type="GraphNode"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -796.0
+margin_bottom = -528.0
+title = "Output File"
+show_close = true
+resizable = true
+slot/0/left_enabled = true
+slot/0/left_type = 1
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 1
+slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = true
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color( 1, 1, 1, 1 )
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 212.0
+margin_bottom = 48.0
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+margin_top = 5.0
+margin_right = 55.0
+margin_bottom = 19.0
+text = "File Path"
+
+[node name="FilePath" type="LineEdit" parent="HBoxContainer2"]
+margin_left = 59.0
+margin_right = 196.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+text = "./output.txt"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 49.0
+margin_right = 212.0
+margin_bottom = 63.0
+
+[node name="Label" type="Label" parent="HBoxContainer3"]
+margin_right = 78.0
+margin_bottom = 14.0
+text = "Data Stream"
+
+[node name="Append" type="CheckBox" parent="."]
+margin_left = 16.0
+margin_top = 64.0
+margin_right = 212.0
+margin_bottom = 88.0
+text = "Append"

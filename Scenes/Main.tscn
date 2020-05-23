@@ -1,0 +1,269 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.00392157, 0.0156863, 0.0509804, 1 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+UndefNodeColor = Color( 0.905882, 0.85098, 0.0196078, 1 )
+StringNodeColor = Color( 0.329412, 0.368627, 0.945098, 1 )
+BinaryNodeColor = Color( 0.596078, 0, 0.533333, 1 )
+StringArrayNodeColor = Color( 0.360784, 0.588235, 0.87451, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="PanelContainer" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Title"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1017.0
+margin_bottom = 21.0
+text = "Visual Scripting Virus Engine"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 32.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+
+[node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 568.0
+size_flags_horizontal = 3
+
+[node name="SearchContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/HSplitContainer"]
+margin_right = 100.0
+margin_bottom = 568.0
+
+[node name="NodeSearch" type="LineEdit" parent="VBoxContainer/HBoxContainer/HSplitContainer/SearchContainer"]
+margin_right = 100.0
+margin_bottom = 24.0
+
+[node name="NodeTree" type="Tree" parent="VBoxContainer/HBoxContainer/HSplitContainer/SearchContainer"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 568.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_vertical = 3
+
+[node name="GraphContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/HSplitContainer"]
+margin_left = 112.0
+margin_right = 1024.0
+margin_bottom = 568.0
+size_flags_horizontal = 3
+
+[node name="ButtonBar" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer"]
+margin_right = 912.0
+margin_bottom = 20.0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer/ButtonBar"]
+margin_right = 645.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+
+[node name="ClearBtn" type="Button" parent="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer/ButtonBar"]
+margin_left = 649.0
+margin_right = 693.0
+margin_bottom = 20.0
+text = "Clear"
+
+[node name="MakeNodeBtn" type="Button" parent="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer/ButtonBar"]
+margin_left = 697.0
+margin_right = 781.0
+margin_bottom = 20.0
+text = "Make Node"
+
+[node name="LoadBtn" type="Button" parent="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer/ButtonBar"]
+margin_left = 785.0
+margin_right = 827.0
+margin_bottom = 20.0
+text = "Load"
+
+[node name="SaveBtn" type="Button" parent="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer/ButtonBar"]
+margin_left = 831.0
+margin_right = 872.0
+margin_bottom = 20.0
+text = "Save"
+
+[node name="RunBtn" type="Button" parent="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer/ButtonBar"]
+margin_left = 876.0
+margin_right = 912.0
+margin_bottom = 20.0
+text = "Run"
+
+[node name="GraphEdit" type="GraphEdit" parent="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer"]
+margin_top = 24.0
+margin_right = 912.0
+margin_bottom = 568.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/bg = SubResource( 1 )
+custom_colors/grid_major = Color( 0.337255, 0.00784314, 0.00784314, 1 )
+custom_colors/grid_minor = Color( 0.109804, 0.00784314, 0.00784314, 1 )
+right_disconnects = true
+scroll_offset = Vector2( 0, -20 )
+
+[node name="FileDialog" type="FileDialog" parent="."]
+margin_left = 309.632
+margin_top = 202.053
+margin_right = 805.632
+margin_bottom = 523.053
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MakeNodeDialog" type="ConfirmationDialog" parent="."]
+margin_left = 387.0
+margin_top = 186.0
+margin_right = 812.0
+margin_bottom = 446.0
+
+[node name="Rows" type="VBoxContainer" parent="MakeNodeDialog"]
+margin_left = 8.0
+margin_top = 9.0
+margin_right = 417.0
+margin_bottom = 224.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slots" type="HBoxContainer" parent="MakeNodeDialog/Rows"]
+margin_right = 409.0
+margin_bottom = 139.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inputs" type="VBoxContainer" parent="MakeNodeDialog/Rows/Slots"]
+margin_right = 202.0
+margin_bottom = 139.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="MakeNodeDialog/Rows/Slots/Inputs"]
+margin_right = 202.0
+margin_bottom = 28.0
+
+[node name="Label" type="Label" parent="MakeNodeDialog/Rows/Slots/Inputs/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 195.0
+margin_bottom = 21.0
+text = "Inputs"
+
+[node name="Exports" type="VBoxContainer" parent="MakeNodeDialog/Rows/Slots"]
+margin_left = 206.0
+margin_right = 409.0
+margin_bottom = 139.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="MakeNodeDialog/Rows/Slots/Exports"]
+margin_right = 203.0
+margin_bottom = 28.0
+
+[node name="Label" type="Label" parent="MakeNodeDialog/Rows/Slots/Exports/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 196.0
+margin_bottom = 21.0
+text = "Exports"
+
+[node name="CategoryInfo" type="HBoxContainer" parent="MakeNodeDialog/Rows"]
+margin_top = 143.0
+margin_right = 409.0
+margin_bottom = 163.0
+
+[node name="Label" type="Label" parent="MakeNodeDialog/Rows/CategoryInfo"]
+margin_top = 3.0
+margin_right = 67.0
+margin_bottom = 17.0
+text = "Categories"
+
+[node name="SelectCategoryBtn" type="OptionButton" parent="MakeNodeDialog/Rows/CategoryInfo"]
+margin_left = 71.0
+margin_right = 100.0
+margin_bottom = 20.0
+
+[node name="NewCategory" type="LineEdit" parent="MakeNodeDialog/Rows/CategoryInfo"]
+visible = false
+margin_left = 104.0
+margin_right = 162.0
+margin_bottom = 24.0
+
+[node name="PreviousNodes" type="HBoxContainer" parent="MakeNodeDialog/Rows"]
+margin_top = 167.0
+margin_right = 409.0
+margin_bottom = 187.0
+
+[node name="Label" type="Label" parent="MakeNodeDialog/Rows/PreviousNodes"]
+margin_top = 3.0
+margin_right = 100.0
+margin_bottom = 17.0
+text = "Previous Nodes"
+
+[node name="PreviousNodesBtn" type="OptionButton" parent="MakeNodeDialog/Rows/PreviousNodes"]
+margin_left = 104.0
+margin_right = 133.0
+margin_bottom = 20.0
+
+[node name="FileInfo" type="HBoxContainer" parent="MakeNodeDialog/Rows"]
+margin_top = 191.0
+margin_right = 409.0
+margin_bottom = 215.0
+
+[node name="Label" type="Label" parent="MakeNodeDialog/Rows/FileInfo"]
+margin_top = 5.0
+margin_right = 129.0
+margin_bottom = 19.0
+text = "Custom Node Name"
+
+[node name="LineEdit" type="LineEdit" parent="MakeNodeDialog/Rows/FileInfo"]
+margin_left = 133.0
+margin_right = 409.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+
+[node name="AlertDialog" type="AcceptDialog" parent="."]
+margin_left = 387.789
+margin_top = 291.737
+margin_right = 722.789
+margin_bottom = 373.737
+dialog_autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_changed" from="VBoxContainer/HBoxContainer/HSplitContainer/SearchContainer/NodeSearch" to="." method="_on_NodeSearch_text_changed"]
+[connection signal="item_activated" from="VBoxContainer/HBoxContainer/HSplitContainer/SearchContainer/NodeTree" to="." method="_on_NodeTree_item_activated"]
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/HSplitContainer/SearchContainer/NodeTree" to="." method="_on_NodeTree_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/HBoxContainer/HSplitContainer/SearchContainer/NodeTree" to="." method="_on_NodeTree_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer/ButtonBar/ClearBtn" to="." method="_on_ClearBtn_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer/ButtonBar/MakeNodeBtn" to="." method="_on_MakeNodeBtn_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer/ButtonBar/LoadBtn" to="." method="_on_LoadBtn_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer/ButtonBar/SaveBtn" to="." method="_on_SaveBtn_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/HSplitContainer/GraphContainer/ButtonBar/RunBtn" to="." method="_on_RunBtn_pressed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]
+[connection signal="confirmed" from="MakeNodeDialog" to="." method="_on_MakeNodeDialog_confirmed"]
