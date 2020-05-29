@@ -9,7 +9,7 @@ Project Goals
 ==
 Create a generic interface so that nodes can be easily created and the "core" engine would be able to handle all the main logic.  The goal is to make each node independent and know very little about it's existing environemnt.  Most methods are optional when creating a node and it *should* work with GDNative (other language) based nodes but this is untested at the time of this writing.
 
-TOOD
+TODO
 ==
 * Make Node
 There is a button to create your current graph into it's own emedded node.  It will look through the nodes for special nodes that are designed to have inputs and outputs and let you label and categorize your new node.  This is not done yet and there is only some placeholder code in it's place.
